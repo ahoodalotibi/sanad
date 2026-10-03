@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+/* =============================================================================
+   SANAD design tokens
+   Brand palette = exact hex values from the SAND brand identity (p.3).
+   *-ink variants are darker shades of brand colours used ONLY for small text,
+   because the original values fall below WCAG AA (4.5:1) on Vanilla.
+   ============================================================================= */
+@theme {
+  /* Brand — main */
+  --color-matcha: #6B7F61;     /* أخضر سند  SAND Green   */
+  --color-pistache: #A7B28F;   /* أخضر هادئ Sage Green   */
+  --color-almond: #EDE6D9;     /* رملي فاتح Light Sand   */
+  --color-chai: #D4B08A;       /* بيج دافئ  Warm Beige   */
+  --color-carob: #8B6F4E;      /* بني ترابي Earth Brown  */
+  /* Brand — secondary */
+  --color-vanilla: #F8F5EE;    /* كريمي     Cream        */
+  --color-oat: #E3D7C4;        /* بيج فاتح  Light Beige  */
+  --color-sand: #C9A982;       /* رملي متوسط Sand        */
+  --color-forest: #3F4D32;     /* أخضر غامق Dark Green   */
+
+  /* Derived, accessibility-driven */
+  --color-paper: #FDFBF7;        /* raised surfaces on Vanilla           */
+  --color-matcha-ink: #55654C;   /* Matcha for small text (5.75:1)       */
+  --color-carob-ink: #6E5A42;    /* Carob for small text  (6.0:1)        */
+  --color-forest-deep: #33402A;  /* pressed state of primary buttons     */
+  --color-brick: #8F3F2F;        /* errors, recording (6.6:1)            */
+  --color-brick-wash: #F6ECE6;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.375rem;
+
+  --shadow-lift: 0 1px 2px rgb(63 77 50 / 0.06), 0 12px 32px -18px rgb(63 77 50 / 0.28);
+  --shadow-focus: 0 0 0 3px rgb(107 127 97 / 0.32);
+
+  --ease-calm: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Typeface roles resolve per language (see [lang] rules below). */
+@theme inline {
+  --font-body: var(--app-font-body);
+  --font-display: var(--app-font-display);
+  --font-scripture: "Amiri Quran", "Amiri", "Traditional Arabic", serif;
+  --font-arabic: "Cairo", "Noto Naskh Arabic", sans-serif;
+}
+
+/* -----------------------------------------------------------------------------
+   Per-language typography. Applies to <html lang> and to any nested element
+   with its own lang attribute (e.g. "اردو" inside the language switcher).
+   ----------------------------------------------------------------------------- */
+:root,
+[lang="en"] {
+  --app-font-body: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --app-font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --app-leading: 1.65;
+  --app-display-weight: 600;
+  --app-display-tracking: -0.01em;
+}
+
+[lang="ur"] {
+  --app-font-body: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  --app-font-display: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  --app-leading: 2.15;              /* Nastaliq needs generous line height */
+  --app-display-weight: 600;
+  --app-display-tracking: 0;
+}
+
+[lang="bn"] {
+  --app-font-body: "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+  --app-font-display: "Noto Serif Bengali", "Hind Siliguri", serif;
+  --app-leading: 1.8;
+  --app-display-weight: 600;
+  --app-display-tracking: 0;
+}
+
+[lang="ar"] {
+  --app-font-body: var(--font-arabic);
+  --app-font-display: var(--font-arabic);
+  --app-leading: 1.9;
+  --app-display-tracking: 0;
+}
+
+@layer base {
+  /* In the base layer so .scripture, .font-display and font-* utilities can override it */
+  [lang] {
+    font-family: var(--app-font-body);
+  }
+
+  html {
+    background-color: var(--color-vanilla);
+    color: var(--color-forest);
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background-color: var(--color-vanilla);
+    font-family: var(--app-font-body);
+    line-height: var(--app-leading);
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: rgb(167 178 143 / 0.45);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-matcha);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--app-font-display);
+    font-weight: var(--app-display-weight);
+    letter-spacing: var(--app-display-tracking);
+  }
+
+  /* Quranic / hadith Arabic text: always RTL, generous size and leading */
+  .scripture {
+    font-family: var(--font-scripture);
+    direction: rtl;
+    text-align: right;
+    line-height: 2.25;
+    font-feature-settings: "calt", "liga";
+  }
+
+  /* Urdu Nastaliq renders visually smaller at the same size; compensate in compact UI */
+  [lang="ur"] .ui-text {
+    font-size: 0.95em;
+    line-height: 2;
+  }
+
+  /* Gentle "recording" pulse ring for the microphone */
+  .pulse-ring {
+    animation: pulse-ring 1.6s var(--ease-calm) infinite;
+  }
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgb(143 63 47 / 0.35); }
+    70% { box-shadow: 0 0 0 12px rgb(143 63 47 / 0); }
+    100% { box-shadow: 0 0 0 0 rgb(143 63 47 / 0); }
+  }
+
+  /* Calm shimmer used by the loading skeleton */
+  .skeleton {
+    background: linear-gradient(90deg, var(--color-almond) 0%, var(--color-paper) 50%, var(--color-almond) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  .scrollbar-quiet {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-oat) transparent;
+  }
+}
+
+/* One orchestrated moment: the hero arch outline draws itself once on load. */
+@layer components {
+  .arch-draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: arch-draw 1.6s var(--ease-calm) 0.15s forwards;
+  }
+  @keyframes arch-draw {
+    to { stroke-dashoffset: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .arch-draw { stroke-dashoffset: 0; animation: none; }
+  }
+}
+
+/* Nastaliq has tall ascenders/descenders: headings set at Latin leading collide.
+   Unlayered on purpose so it wins over leading-* utilities on any display heading. */
+[lang="ur"] .font-display,
+.font-display[lang="ur"] {
+  line-height: 1.8;
+}

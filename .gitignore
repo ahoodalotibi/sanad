@@ -1,0 +1,23 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/
+
+# Raw source files: keep specs, not the (potentially licensed) source data
+data/raw/**
+!data/raw/**/
+!data/raw/**/README.md
+
+node_modules.zip
+
+node_modules.zip
+
+.env
