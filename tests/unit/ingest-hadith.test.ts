@@ -88,3 +88,18 @@ describe('Sunnah dictionary → database', () => {
     expect(state.chunkRefs).toHaveLength(4);
   });
 });
+
+describe('gradeEnum on grades published by the site', () => {
+  it('accepts only clean sahih/hasan grades', async () => {
+    const { gradeEnum } = await import('../../scripts/ingest/jamharah/hadith-parse.ts');
+    const cases: Record<string, string> = {
+      'صحيح': 'sahih', 'حسن': 'hasan', 'صحيح لغيره': 'sahih', 'حسن صحيح': 'hasan', 'إسناده حسن': 'hasan',
+      'ضعيف جدا': 'daif', 'منكر': 'daif', 'ضعفه الحافظ ابن حجر في البلوغ عقب تخريجه': 'daif',
+      'الحديث الأول: صحيح. الحديث الثاني: ضعيف': 'daif', 'صحيح، ولكن الزيادة ضعيفة': 'daif',
+      'قال الهيثمي في مجمع الزوائد: رجاله رجال الصحيح': 'unknown', 'صحيح موقوفًا على أبي بكر الصديق رضي الله عنه': 'unknown',
+      'الآثار صحيحة': 'unknown', 'نقل الألباني تصحيحه عن ابن تيمية ولم يتعقبه': 'unknown', 'صحيح دون ذكر السنين': 'unknown',
+      'رجح البيهقي أنه موقوف': 'unknown', 'لم أجد له حكماً عند الألباني': 'unknown',
+    };
+    for (const [grade, expected] of Object.entries(cases)) expect([grade, gradeEnum(grade)]).toEqual([grade, expected]);
+  });
+});

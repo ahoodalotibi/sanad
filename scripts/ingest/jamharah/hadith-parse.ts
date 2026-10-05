@@ -180,12 +180,19 @@ export function parseHadithPage(doc: Doc, url: string): HadithPage {
 }
 
 /** Maps the published grade wording onto the database enum; anything unclear stays "unknown". */
+/**
+ * Maps the published grade to the database enum. Conservative on purpose: only a clean
+ * «صحيح»/«حسن» grade becomes sahih/hasan. A grade that is about a companion's saying
+ * (موقوف / أثر), only about the narrators («رجاله رجال الصحيح»), partial («صحيح دون …»),
+ * reported second-hand, or not found, becomes 'unknown' — so it is never shown as an answer.
+ */
 export function gradeEnum(grade: string | null): 'sahih' | 'hasan' | 'daif' | 'mawdu' | 'no_basis' | 'unknown' {
   if (!grade) return 'unknown';
   const g = grade.replace(/[ً-ْ]/g, '');
   if (/موضوع/.test(g)) return 'mawdu';
   if (/لا أصل له/.test(g)) return 'no_basis';
-  if (/ضعيف/.test(g)) return 'daif';
+  if (/ضعيف|ضعف|منكر/.test(g)) return 'daif';
+  if (/موقوف|أثر|الآثار|رجال|تصحيحه|دون|لم أجد|لم نجد|لم أقف|رجح/.test(g)) return 'unknown';
   if (/حسن/.test(g)) return 'hasan';
   if (/صحيح/.test(g)) return 'sahih';
   return 'unknown';
