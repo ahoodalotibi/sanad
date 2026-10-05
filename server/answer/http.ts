@@ -16,6 +16,7 @@ import { SearchIndex } from './search.ts';
 const Body = z.object({
   question: z.string().trim().min(1).max(1000),
   uiLanguage: z.string().max(10).optional(),
+  language: z.string().regex(/^[a-z]{2,3}(-[A-Za-z0-9]+)?$/).optional(),
   history: z.array(z.object({ role: z.enum(['user', 'assistant']), text: z.string().max(2000) })).max(10).optional(),
   clarifications: z.number().int().min(0).max(5).optional(),
 });

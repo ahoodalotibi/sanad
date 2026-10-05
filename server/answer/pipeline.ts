@@ -47,7 +47,7 @@ export async function answer(req: AskRequest, deps: AnswerDeps): Promise<{ respo
       deps.log?.(`[answer] understand failed, using rules: ${(err as Error).message}`);
     }
   }
-  const language = (u?.language || detectLanguage(q, fallbackLang)).toLowerCase().split('-')[0];
+  const language = (req.language || u?.language || detectLanguage(q, fallbackLang)).toLowerCase().split('-')[0];
   // rules are a safety net even when the model is used: personal cases always go to a person
   const category = asksForHuman(q) ? 'request_human' : looksPersonal(q) ? 'personal_case' : (u?.category ?? (isGreeting(q) ? 'greeting' : 'question'));
   const trace: AnswerTrace = { language, category, usedModel: !!u, hits: [], selected: [] };

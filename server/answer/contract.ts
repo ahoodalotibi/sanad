@@ -16,6 +16,8 @@ export interface AskRequest {
   question: string;
   /** Interface language, used when the question's language cannot be detected */
   uiLanguage?: string;
+  /** Language the asker chose explicitly (overrides detection) */
+  language?: string;
   /** Previous turns of this conversation (for clarifications) */
   history?: AskTurn[];
   /** How many clarifications were already asked for this question */
