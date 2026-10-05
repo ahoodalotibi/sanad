@@ -6,8 +6,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { accountsRouter } from './server/accounts/http.ts';
+import { createSupabaseAccountsStore } from './server/accounts/supabaseStore.ts';
 import { askHandler, createAnswerService, metaHandler } from './server/answer/http.ts';
-import { getServiceClient, isSupabaseConfigured, pingDatabase } from './server/db/index.ts';
+import { getServiceClient, isSupabaseConfigured, pingDatabase, readSupabaseEnv } from './server/db/index.ts';
 
 dotenv.config();
 
@@ -51,6 +53,16 @@ app.get('/api/health/db', async (req, res) => {
 // for understanding and selection only. No religious text is ever generated.
 app.get('/api/meta', metaHandler(answerService));
 app.post('/api/ask', askHandler(answerService));
+
+// Accounts, «أسئلتي», the association portal and admin (Supabase Auth + server-side key)
+const supabaseEnv = isSupabaseConfigured() ? readSupabaseEnv() : null;
+app.use(
+  '/api',
+  accountsRouter({
+    store: supabaseEnv ? createSupabaseAccountsStore(supabaseEnv.url, supabaseEnv.secretKey) : null,
+    publicConfig: supabaseEnv?.publishableKey ? { url: supabaseEnv.url, publishableKey: supabaseEnv.publishableKey } : null,
+  })
+);
 
 async function startServer() {
   if (!isProd) {

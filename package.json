@@ -24,7 +24,8 @@
     "ingest:load": "tsx scripts/ingest/load.ts",
     "ingest:bayyinat": "tsx scripts/ingest/bayyinat.ts",
     "ingest:hadith": "tsx scripts/ingest/jamharah-hadith.ts",
-    "corpus:build": "tsx scripts/corpus/build.ts"
+    "corpus:build": "tsx scripts/corpus/build.ts",
+    "admin:grant": "tsx scripts/admin/grant.mts"
   },
   "dependencies": {
     "@fontsource/amiri-quran": "^5.3.0",
