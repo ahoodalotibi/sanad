@@ -30,6 +30,16 @@ export function readLlmSettings(env: Record<string, string | undefined> = proces
   };
 }
 
+/** JSON from a model, tolerating code fences and broken \\u escapes. */
+export function parseLooseJson(text: string): unknown {
+  const body = text.replace(/^\s*```(?:json)?\s*|\s*```\s*$/g, '');
+  try {
+    return JSON.parse(body);
+  } catch {
+    return JSON.parse(body.replace(/\\u(?![0-9a-fA-F]{4})/g, '\\\\u'));
+  }
+}
+
 export interface Llm {
   json<T>(system: string, user: string, schema: z.ZodType<T>): Promise<T>;
 }
@@ -60,7 +70,7 @@ export function createLlm(settings: LlmSettings, fetchImpl: typeof fetch = fetch
       }
       const data = (await res.json()) as { choices?: Array<{ message?: { content?: string } }> };
       const text = data.choices?.[0]?.message?.content ?? '';
-      const json = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ''));
+      const json = parseLooseJson(text);
       return schema.parse(json);
     } finally {
       clearTimeout(timer);
@@ -87,14 +97,16 @@ export function createLlm(settings: LlmSettings, fetchImpl: typeof fetch = fetch
 // ---------------------------------------------------------------------------
 // Step 1: understand the question
 // ---------------------------------------------------------------------------
+// Models sometimes send null for an empty field or a few extra items; accept and normalise those.
+const list = (max: number) => z.array(z.string()).nullish().transform((v) => (v ?? []).filter((x) => typeof x === 'string' && x.trim()).slice(0, max));
 export const Understanding = z.object({
   language: z.string().min(2).max(10),
   category: z.enum(['question', 'personal_case', 'out_of_scope', 'request_human', 'greeting']),
-  clear: z.boolean(),
-  clarify_question: z.string().nullable().optional(),
-  clarify_options: z.array(z.string()).max(3).optional(),
-  keywords_ar: z.array(z.string()).max(8),
-  keywords_en: z.array(z.string()).max(8),
+  clear: z.boolean().nullish().transform((v) => v ?? true),
+  clarify_question: z.string().nullish(),
+  clarify_options: list(3),
+  keywords_ar: list(8),
+  keywords_en: list(8),
 });
 export type Understanding = z.infer<typeof Understanding>;
 
@@ -118,8 +130,8 @@ Previous turns may be given; use them only to resolve what the current message r
 // Step 2: select the items that answer it
 // ---------------------------------------------------------------------------
 export const Selection = z.object({
-  selected: z.array(z.string()).max(3),
-  reason: z.string().max(300).optional(),
+  selected: list(3),
+  reason: z.string().nullish(),
 });
 export type Selection = z.infer<typeof Selection>;
 
