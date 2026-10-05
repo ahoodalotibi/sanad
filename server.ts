@@ -1,6 +1,6 @@
 /**
  * SANAD Full-Stack Express Server with Vite Middleware
- * Serves the SANAD RAG API (/api/ask), health checks, and the frontend
+ * Serves the Sanad answer API (/api/ask, /api/meta), health checks, and the frontend
  */
 import express from 'express';
 import dotenv from 'dotenv';
@@ -8,7 +8,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { askHandler, createAnswerService, metaHandler } from './server/answer/http.ts';
 import { getServiceClient, isSupabaseConfigured, pingDatabase } from './server/db/index.ts';
-import { isRagConfigured } from './server/rag/index.ts';
 
 dotenv.config();
 
@@ -21,13 +20,17 @@ const isProd = process.env.NODE_ENV === 'production';
 
 app.use(express.json({ limit: '32kb' }));
 
+// Answer path: approved corpus + optional model (classification and selection only)
+const answerService = createAnswerService();
+
 // Server health check
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
     service: 'SANAD Knowledge Engine',
     supabaseConfigured: isSupabaseConfigured(),
-    ragConfigured: isRagConfigured() && isSupabaseConfigured()
+    corpusLoaded: !!answerService.corpus,
+    modelConfigured: !!answerService.llm
   });
 });
 
@@ -46,7 +49,6 @@ app.get('/api/health/db', async (req, res) => {
 
 // Question answering: approved corpus (validated content from the reference sources) + optional model
 // for understanding and selection only. No religious text is ever generated.
-const answerService = createAnswerService();
 app.get('/api/meta', metaHandler(answerService));
 app.post('/api/ask', askHandler(answerService));
 

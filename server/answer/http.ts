@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import type { Request, Response } from 'express';
 import { z } from 'zod';
-import { createRateLimiter } from '../api/ask.ts';
+import { createRateLimiter } from './rateLimit.ts';
 import { corpusLanguages, loadCorpus, type Corpus } from './corpus.ts';
 import { createLlm, readLlmSettings, type Llm } from './llm.ts';
 import { answer } from './pipeline.ts';
