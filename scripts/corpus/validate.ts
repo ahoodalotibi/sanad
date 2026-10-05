@@ -107,6 +107,9 @@ export function validateQa(rows: BayyinatRecord[]): Verdict<QaItem>[] {
   return out;
 }
 
+/** Longest glossary section served in an answer (characters). */
+export const MAX_TERM_SECTION = 4000;
+
 export function validateTerms(rows: DictionaryRecord[]): Verdict<TermItem>[] {
   const out: Verdict<TermItem>[] = [];
   for (const [id, group] of groupBy(rows, (r) => r.wordId)) {
@@ -115,10 +118,18 @@ export function validateTerms(rows: DictionaryRecord[]): Verdict<TermItem>[] {
       out.push({ ok: false, id: `word:${id}`, reasons: ['Arabic entry missing or without a published definition'] });
       continue;
     }
-    const v = (r: DictionaryRecord) => ({ url: r.url, title: r.title, sections: r.sections.map((s) => ({ label: s.label, text: s.text })) });
+    // The served answer shows the short definitions. Long encyclopedia articles (الموسوعة الكويتية and the
+    // like) stay one click away on the source page; leaving them out keeps the server within 512 MB.
+    const keep = (s: { label: string; text: string }) => !/الموسوعة الكويتية/.test(s.label) && s.text.length <= MAX_TERM_SECTION;
+    const v = (r: DictionaryRecord) => ({ url: r.url, title: r.title, sections: r.sections.filter(keep).map((s) => ({ label: s.label, text: s.text })) });
     const tr: TermItem['tr'] = {};
-    for (const t of group) if (t.language !== 'ar' && t.title && t.sections.length) tr[t.language] = v(t);
-    out.push({ ok: true, warnings: [], item: { kind: 'term', id: `word:${id}`, url: ar.url, categories: ar.categories.map((c) => c.name), ar: v(ar), tr } });
+    for (const t of group) if (t.language !== 'ar' && t.title && t.sections.length) { const tv = v(t); if (tv.sections.length) tr[t.language] = tv; }
+    const arv = v(ar);
+    if (!arv.sections.length) {
+      out.push({ ok: false, id: `word:${id}`, reasons: ['only a long encyclopedia article (kept on the source page)'] });
+      continue;
+    }
+    out.push({ ok: true, warnings: [], item: { kind: 'term', id: `word:${id}`, url: ar.url, categories: ar.categories.map((c) => c.name), ar: arv, tr } });
   }
   return out;
 }

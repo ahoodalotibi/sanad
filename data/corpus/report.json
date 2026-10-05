@@ -1,17 +1,17 @@
 {
-  "builtAt": "2026-10-05T17:39:36.772Z",
+  "builtAt": "2026-10-05T18:17:13.774Z",
   "languages": {
-    "ar": 13892,
+    "ar": 13302,
     "bn": 713,
     "bs": 1261,
     "en": 8461,
     "es": 1185,
     "fa": 929,
-    "fr": 1577,
+    "fr": 1575,
     "id": 1707,
-    "ru": 1674,
+    "ru": 1672,
     "tr": 854,
-    "ur": 1597,
+    "ur": 1596,
     "zh": 824
   },
   "hadith": {
@@ -777,10 +777,4143 @@
     ]
   },
   "dictionary": {
-    "accepted": 12689,
-    "rejected": 0,
-    "rejectionReasons": {},
-    "rejectedItems": [],
+    "accepted": 12099,
+    "rejected": 590,
+    "rejectionReasons": {
+      "only a long encyclopedia article (kept on the source page)": 590
+    },
+    "rejectedItems": [
+      {
+        "ok": false,
+        "id": "word:14155",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14156",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14157",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14158",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14159",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14160",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14161",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14162",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14163",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14164",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14165",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14166",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14167",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14168",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14169",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14170",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14171",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14172",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14173",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14174",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14175",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14176",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14177",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14178",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14179",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14180",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14181",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14182",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14183",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14184",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14185",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14186",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14187",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14188",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14189",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14190",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14191",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14192",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14193",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14194",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14195",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14196",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14197",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14198",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14199",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14200",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14201",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14202",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14203",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14204",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14205",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14206",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14207",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14208",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14209",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14210",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14211",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14212",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14213",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14214",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14215",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14216",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14217",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14218",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14219",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14220",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14221",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14222",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14223",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14224",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14225",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14226",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14227",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14228",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14229",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14230",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14231",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14232",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14233",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14234",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14235",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14236",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14237",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14238",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14239",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14240",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14241",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14242",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14243",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14244",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14245",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14246",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14247",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14248",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14249",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14250",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14251",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14252",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14253",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14254",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14255",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14256",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14257",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14258",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14259",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14260",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14261",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14262",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14263",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14264",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14265",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14266",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14267",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14268",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14269",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14270",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14271",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14272",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14273",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14274",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14275",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14276",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14277",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14278",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14279",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14280",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14281",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14282",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14283",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14284",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14285",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14286",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14287",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14288",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14289",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14290",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14291",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14292",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14293",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14294",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14295",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14296",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14297",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14298",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14299",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14300",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14301",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14302",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14303",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14304",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14305",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14306",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14307",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14308",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14309",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14310",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14311",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14312",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14313",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14314",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14315",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14316",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14317",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14318",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14319",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14320",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14321",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14322",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14323",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14324",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14325",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14326",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14327",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14328",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14329",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14330",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14331",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14332",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14333",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14334",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14335",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14336",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14337",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14338",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14339",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14340",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14341",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14342",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14343",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14344",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14345",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14346",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14347",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14348",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14349",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14350",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14351",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14352",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14353",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14354",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14355",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14356",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14357",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14358",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14359",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14360",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14361",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14362",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14363",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14364",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14365",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14366",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14367",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14368",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14369",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14370",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14371",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14372",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14373",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14374",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14375",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14376",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14377",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14378",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14379",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14380",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14381",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14382",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14383",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14384",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14385",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14386",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14387",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14388",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14389",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14390",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14391",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14392",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14393",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14394",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14395",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14396",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14397",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14398",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14399",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14400",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14401",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14402",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14403",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14404",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14405",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14406",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14407",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14408",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14409",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14410",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14411",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14412",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14413",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14414",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14415",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14416",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14417",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14418",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14419",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14420",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14421",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14422",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14423",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14424",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14425",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14426",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14427",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14428",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14429",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14430",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14431",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14432",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14433",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14434",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14435",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14436",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14437",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14438",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14439",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14440",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14441",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14442",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14443",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14444",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14445",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14446",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14447",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14448",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14449",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14450",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14451",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14452",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14453",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14454",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14455",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14456",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14457",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14458",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14459",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14460",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14461",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14462",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14463",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14464",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14465",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14466",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14467",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14468",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14469",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14470",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14471",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14472",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14473",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14474",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14475",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14476",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14477",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14478",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14479",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14480",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14481",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14482",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14483",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14484",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14485",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14486",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14487",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14488",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14489",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14490",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14491",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14492",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14493",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14494",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14495",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14496",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14497",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14498",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14499",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14500",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14501",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14502",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14503",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14504",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14505",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14506",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14507",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14508",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14509",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14510",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14511",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14512",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14513",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14514",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14515",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14516",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14517",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14518",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14519",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14520",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14521",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14522",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14523",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14524",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14525",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14526",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14527",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14528",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14529",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14530",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14531",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14532",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14533",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14534",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14535",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14536",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14537",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14538",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14539",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14540",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14541",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14542",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14543",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14544",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14545",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14546",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14547",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14548",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14549",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14550",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14551",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14552",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14553",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14554",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14555",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14556",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14557",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14558",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14559",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14560",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14561",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14562",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14563",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14564",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14565",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14566",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14567",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14568",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14569",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14570",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14571",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14572",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14573",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14574",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14575",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14576",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14577",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14578",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14579",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14580",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14581",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14582",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14583",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14584",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14585",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14586",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14587",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14588",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14589",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14590",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14591",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14592",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14593",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14594",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14595",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14596",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14597",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14598",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14599",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14600",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14601",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14602",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14603",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14604",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14605",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14606",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14607",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14608",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14609",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14610",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14611",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14612",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14613",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14614",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14615",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14616",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14617",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14618",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14619",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14620",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14621",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14622",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14623",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14624",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14625",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14626",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14627",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14628",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14629",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14630",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14631",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14632",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14633",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14634",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14635",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14636",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14637",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14638",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14639",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14640",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14641",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14642",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14643",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14644",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14645",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14646",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14647",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14648",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14649",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14650",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14651",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14652",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14653",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14654",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14655",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14656",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14657",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14658",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14659",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14660",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14661",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14662",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14663",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14664",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14665",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14666",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14667",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14668",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14669",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14670",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14671",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14672",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14673",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14674",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14675",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14676",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14677",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14678",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14679",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14680",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14681",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14682",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14683",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14684",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14685",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14686",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14687",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14688",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14689",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14690",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14691",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14692",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14693",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14694",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14695",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14696",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14697",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14698",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14699",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14700",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14701",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14702",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14703",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14704",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14705",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14706",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14707",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14708",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14709",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14710",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14711",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14712",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14713",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14714",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14715",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14716",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14717",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14718",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14719",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14720",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14721",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14722",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14723",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14724",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14725",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14726",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14727",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14728",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14729",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14730",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14731",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14732",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14733",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14734",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14735",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14736",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14737",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14738",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14739",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14740",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14741",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14742",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14743",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "word:14744",
+        "reasons": [
+          "only a long encyclopedia article (kept on the source page)"
+        ]
+      }
+    ],
     "warnings": []
   }
 }
