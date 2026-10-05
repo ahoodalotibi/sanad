@@ -79,7 +79,6 @@ async function main() {
       if (entry.sections.length === 0) throw new Error('no published definition on the page');
       const rec: DictionaryRecord = { ...entry, sourceWordId: id, raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() };
       records.push(detach(rec));
-      return rec;
     },
     progress('arabic entries')
   );
