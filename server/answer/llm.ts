@@ -34,37 +34,51 @@ export interface Llm {
   json<T>(system: string, user: string, schema: z.ZodType<T>): Promise<T>;
 }
 
-export function createLlm(settings: LlmSettings, fetchImpl: typeof fetch = fetch): Llm {
+export function createLlm(settings: LlmSettings, fetchImpl: typeof fetch = fetch, waitMs = (ms: number) => new Promise((r) => setTimeout(r, ms))): Llm {
+  async function once<T>(system: string, user: string, schema: z.ZodType<T>): Promise<T> {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), settings.timeoutMs);
+    try {
+      const res = await fetchImpl(`${settings.baseUrl}chat/completions`, {
+        method: 'POST',
+        signal: ctrl.signal,
+        headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${settings.apiKey}` },
+        body: JSON.stringify({
+          model: settings.model,
+          temperature: 0,
+          response_format: { type: 'json_object' },
+          messages: [
+            { role: 'system', content: system },
+            { role: 'user', content: user },
+          ],
+        }),
+      });
+      if (!res.ok) {
+        // the provider's error message helps (unknown model, quota…); it never contains the key
+        const detail = (await res.text().catch(() => '')).replace(/\s+/g, ' ').slice(0, 600);
+        throw new Error(`LLM HTTP ${res.status} ${detail}`);
+      }
+      const data = (await res.json()) as { choices?: Array<{ message?: { content?: string } }> };
+      const text = data.choices?.[0]?.message?.content ?? '';
+      const json = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ''));
+      return schema.parse(json);
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
   return {
     async json(system, user, schema) {
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), settings.timeoutMs);
-      try {
-        const res = await fetchImpl(`${settings.baseUrl}chat/completions`, {
-          method: 'POST',
-          signal: ctrl.signal,
-          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${settings.apiKey}` },
-          body: JSON.stringify({
-            model: settings.model,
-            temperature: 0,
-            response_format: { type: 'json_object' },
-            messages: [
-              { role: 'system', content: system },
-              { role: 'user', content: user },
-            ],
-          }),
-        });
-        if (!res.ok) {
-          // the provider's error message helps (e.g. unknown model); it never contains the key
-          const detail = (await res.text().catch(() => '')).replace(/\s+/g, ' ').slice(0, 300);
-          throw new Error(`LLM HTTP ${res.status} ${detail}`);
+      // free tiers allow only a few requests per minute: on 429 wait as asked, then retry (twice at most)
+      for (let attempt = 0; ; attempt++) {
+        try {
+          return await once(system, user, schema);
+        } catch (err) {
+          const msg = (err as Error).message;
+          if (!msg.startsWith('LLM HTTP 429') || attempt >= 2) throw err;
+          const asked = /retry in ([\d.]+)s/i.exec(msg);
+          await waitMs(Math.min(30, asked ? Number(asked[1]) + 1 : 6) * 1000);
         }
-        const data = (await res.json()) as { choices?: Array<{ message?: { content?: string } }> };
-        const text = data.choices?.[0]?.message?.content ?? '';
-        const json = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ''));
-        return schema.parse(json);
-      } finally {
-        clearTimeout(timer);
       }
     },
   };

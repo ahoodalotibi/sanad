@@ -15,11 +15,13 @@ const index = new SearchIndex(corpus);
 const settings = readLlmSettings();
 const llm = settings ? createLlm(settings) : null;
 console.log(`corpus ${corpus.items.length} items · model ${llm ? settings!.model : 'none (rules only)'}\n`);
+const pause = Number(process.env.EVAL_DELAY_MS ?? (llm ? 9000 : 0)); // free tier: a few requests per minute
 const short = (s: string, n = 90) => (s.length > n ? s.slice(0, n) + '…' : s).replace(/\s+/g, ' ');
 for (const c of BENCHMARK_TEST_CASES) {
   console.log(`■ ${c.id} [${c.targetTier}] ${c.title}`);
   for (const [lang, q] of [['en', c.questionEn], ['ur', c.questionUr], ['bn', c.questionBn]] as const) {
     const { response: r, trace } = await answer({ question: q }, { index, corpus, llm, log: (m) => console.log('   ! ' + m) });
+    if (pause) await new Promise((res) => setTimeout(res, pause));
     let out = r.kind;
     if (r.kind === 'answer') out += ` (${r.items.map((i) => `${i.type}:${i.id}/${i.translation}`).join(', ')}) → ${short(i0(r.items[0]))}`;
     if (r.kind === 'refer') out += ` (${r.reason})`;
