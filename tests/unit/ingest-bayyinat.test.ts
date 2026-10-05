@@ -6,10 +6,11 @@ import { parseQaPage, parseQaUrl, parseSourcePage } from '../../scripts/ingest/b
 import { buildChunks, loadBayyinat, splitLines } from '../../scripts/ingest/bayyinat/load.ts';
 import { createMemoryIngestStore } from '../../scripts/ingest/lib/store.ts';
 import type { BayyinatRecord } from '../../scripts/ingest/bayyinat.ts';
+import { RELATED_BOOK } from '../../scripts/ingest/bayyinat/parse.ts';
 
 const fixture = (name: string) => parseHTML(fs.readFileSync(path.join(__dirname, '../fixtures/bayenat', name), 'utf8')).document;
 const URL725 = 'https://bayenat.net/ar/category/122/725';
-const record = (): BayyinatRecord => ({ ...parseQaPage(fixture('qa-725.html'), URL725), sourceItemId: '725', bookReference: 'https://dawa.center/file/7937', raw: { file: 'x', sha256: 'y' }, fetchedAt: '2026-10-05T00:00:00Z' });
+const record = (): BayyinatRecord => ({ ...parseQaPage(fixture('qa-725.html'), URL725), sourceItemId: '725', relatedBook: RELATED_BOOK, raw: { file: 'x', sha256: 'y' }, fetchedAt: '2026-10-05T00:00:00Z' });
 
 describe('Bayyinat parser', () => {
   it('reads item URLs and the pager from a listing page', () => {
@@ -59,7 +60,10 @@ describe('Bayyinat → database', () => {
     const doc = [...state.documents.values()][0];
     expect(doc.external_ref).toBe('bayenat:725');
     expect(doc.publication_status).toBe('draft');
-    expect(doc.metadata.book_reference).toBe('https://dawa.center/file/7937');
+    // the link to the book is documented as a relation, never as "this is the book's text"
+    expect(doc.metadata.related_book).toMatchObject({ url: 'https://dawa.center/file/7937', relation: 'publisher_platform_referenced_in_book', inBook: 'unverified' });
+    expect(doc.canonical_url).toBe('https://bayenat.net/ar/category/122/725');
+    expect(JSON.stringify(state.chunks.get(doc.id))).not.toMatch(/page_start|book_page/);
     expect((await loadBayyinat([record()], store)).documents).toEqual({ unchanged: 1 });
   });
 });

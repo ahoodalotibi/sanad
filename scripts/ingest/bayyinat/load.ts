@@ -11,14 +11,16 @@ import { languageFromLabel, type ChunkInput, type IngestStore, type SourceRow } 
 import type { BayyinatRecord } from '../bayyinat.ts';
 
 export const BAYYINAT_SOURCE: SourceRow = {
-  slug: 'bayyinat',
-  name_ar: 'بينات: أسئلة وأجوبة عن الإسلام — مركز أصول',
-  name_en: 'Bayyinat: Questions and Answers about Islam — Osoul Center',
+  slug: 'bayenat-platform',
+  name_ar: 'منصة بينات — مؤلفات مركز أصول (bayenat.net)',
+  name_en: 'Bayenat platform — Osoul Center items',
   domain: 'shubuhat_faq',
-  base_url: 'https://dawa.center/file/7937',
+  base_url: 'https://bayenat.net/ar/sources/11',
   usage_rule_ar: 'تعد مصدرًا أساسيًا للحلول الحوارية في الشبهات.',
-  reference_section: 'المرجعية والحزمة العلمية والبيانات، ص4 — الشبهات والأسئلة المتكررة (النص من منصة الناشر bayenat.net)',
-  is_primary_reference: true,
+  reference_section:
+    'مرتبطة بكتاب «بينات: أسئلة وأجوبة عن الإسلام» المذكور في المرجعية ص4 (https://dawa.center/file/7937). ' +
+    'مقدمة الكتاب (ص21) تذكر أن المشروع نشر الأسئلة والأجوبة على هذه المنصة ثم انتقى أهمها في الكتاب؛ فلا يُدّعى أن كل مادة من الكتاب ولا يُنسب لها رقم صفحة.',
+  is_primary_reference: false,
 };
 
 export const MAX_CHUNK_CHARS = 3000;
@@ -45,7 +47,7 @@ export function splitLines(text: string, max = MAX_CHUNK_CHARS): string[] {
 }
 
 export function buildChunks(r: BayyinatRecord): ChunkInput[] {
-  const meta = { item_id: r.sourceItemId, source_url: r.url, book_reference: r.bookReference, category: r.category };
+  const meta = { item_id: r.sourceItemId, source_url: r.url, category: r.category };
   const chunks: ChunkInput[] = [];
   const head = [r.question, ...(r.similar.length ? ['عبارات مشابهة للسؤال:', ...r.similar] : [])].join('\n');
   if (r.shortAnswer) chunks.push({ chunk_index: 0, language: r.language, content_type: 'qa', heading: r.title || r.question, content: `${head}\nمختصر الجواب:\n${r.shortAnswer}`, metadata: { ...meta, part: 'short_answer' } });
@@ -79,12 +81,12 @@ export async function loadBayyinat(records: BayyinatRecord[], store: IngestStore
       canonical_url: r.url,
       external_ref: ref,
       content_sha256: sha256(JSON.stringify([r.url, r.question, r.similar, r.shortAnswer, r.detailedAnswer])),
-      license_note: 'مركز أصول — بينات (https://dawa.center/file/7937)، النص من منصة الناشر bayenat.net',
+      license_note: 'مركز أصول — منصة بينات (bayenat.net). النص مأخوذ من صفحة المسألة المذكورة في canonical_url.',
       metadata: {
         kind: 'qa',
         item_id: r.sourceItemId,
         translation_of: r.language === 'ar' ? null : `bayenat:${r.sourceItemId}`,
-        book_reference: r.bookReference,
+        related_book: r.relatedBook,
         category: r.category,
         author: r.author,
         publisher: r.publisher,

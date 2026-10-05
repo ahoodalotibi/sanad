@@ -13,12 +13,13 @@ import path from 'node:path';
 import { parseHTML } from 'linkedom';
 import { intArg, parseArgs, progress, writeJson, writeJsonl } from './lib/cli.ts';
 import { Fetcher, mapAll } from './lib/fetcher.ts';
-import { BAYYINAT_BOOK, parseQaPage, parseSourcePage, sourcePageUrl, type BayyinatQa } from './bayyinat/parse.ts';
+import { RELATED_BOOK, parseQaPage, parseSourcePage, sourcePageUrl, type BayyinatQa } from './bayyinat/parse.ts';
 
 export interface BayyinatRecord extends BayyinatQa {
   /** Arabic item this record belongs to */
   sourceItemId: string;
-  bookReference: string;
+  /** The book in the reference document this platform is linked to — see RELATED_BOOK. Not a claim that this item is in the book. */
+  relatedBook: typeof RELATED_BOOK;
   raw: { file: string; sha256: string };
   fetchedAt: string;
 }
@@ -51,7 +52,7 @@ async function main() {
   const records: BayyinatRecord[] = [];
   const now = () => new Date().toISOString();
   const add = (qa: BayyinatQa, sourceItemId: string, file: string, sha: string) =>
-    records.push({ ...qa, sourceItemId, bookReference: BAYYINAT_BOOK, raw: { file, sha256: sha }, fetchedAt: now() });
+    records.push({ ...qa, sourceItemId, relatedBook: RELATED_BOOK, raw: { file, sha256: sha }, fetchedAt: now() });
 
   const ar = await mapAll(
     urls,
@@ -84,7 +85,8 @@ async function main() {
   writeJsonl(path.join(OUT, 'qa.jsonl'), records);
   const byLanguage = records.reduce<Record<string, number>>((acc, r) => ((acc[r.language] = (acc[r.language] ?? 0) + 1), acc), {});
   const report = {
-    source: 'bayenat.net/ar/sources/11 — بينات (مركز أصول); book reference: ' + BAYYINAT_BOOK,
+    source: 'bayenat.net/ar/sources/11 — منصة بينات، مؤلفات مركز أصول',
+    relatedBook: RELATED_BOOK,
     startedAt: started,
     finishedAt: now(),
     trialBatch: Number.isFinite(LIMIT),

@@ -39,6 +39,12 @@ describe('dictionary → database mapping', () => {
     expect(arChunks[0].content.startsWith('الاجـْتِهَاد\nبذل الوسع للنظر في الأدلة')).toBe(true);
     expect(arChunks[0].metadata.references).toMatch(/^انظر/);
 
+    // the English definition is linked to the Arabic section it translates, not to the whole entry
+    const enChunks = state.chunks.get(en.id)!;
+    expect(enChunks[0].metadata.translation_of_section).toEqual({ external_ref: 'word:196', chunk_index: 1, section_label: 'من موسوعة المصطلحات الإسلامية' });
+    expect(arChunks[0].metadata.translation_of_section).toBeNull();
+    expect(arChunks[0].metadata.categories).toEqual(['الفقه الإسلامي', 'أصول الفقه']);
+
     const term = [...state.terms.values()][0];
     expect(term).toMatchObject({ slug: 'jamharah-196', term_ar: 'الاجـْتِهَاد' });
     expect(state.termTranslations).toEqual([{ term_id: term.id, language: 'en', equivalent: 'Ijtihad', usage_note: null, source_id: expect.any(String), is_preferred: true }]);

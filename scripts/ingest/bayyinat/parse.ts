@@ -20,6 +20,21 @@ export const BAYENAT_ORIGIN = 'https://bayenat.net';
 export const BAYENAT_OSOUL_SOURCE = `${BAYENAT_ORIGIN}/ar/sources/11`;
 export const BAYYINAT_BOOK = 'https://dawa.center/file/7937';
 
+/**
+ * How bayenat.net relates to the book listed in the reference document. The book's introduction
+ * (PDF p.21, «هذا الكتاب») says the project published its questions and answers on bayenat.net/ar
+ * and then SELECTED the most important ones for the book. So the platform is the publisher's
+ * larger collection: an item read here is not claimed to be in the book, nor to match a book page.
+ */
+export const RELATED_BOOK = {
+  url: BAYYINAT_BOOK,
+  title: 'بينات: أسئلة وأجوبة عن الإسلام',
+  publisher: 'مركز أصول',
+  relation: 'publisher_platform_referenced_in_book',
+  evidence: 'مقدمة الكتاب، ص21 من ملف PDF («هذا الكتاب»): المشروع نشر الأسئلة والأجوبة على منصة bayenat.net/ar ثم انتقى أهمها في كتاب مفرد.',
+  inBook: 'unverified',
+} as const;
+
 type El = any;
 type Doc = { querySelector(s: string): El | null; querySelectorAll(s: string): ArrayLike<El>; getElementById?(id: string): El | null };
 

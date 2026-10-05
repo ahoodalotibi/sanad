@@ -47,6 +47,9 @@ export async function loadDictionary(records: DictionaryRecord[], store: IngestS
 
   const sourceId = await store.upsertSource(DICTIONARY_SOURCE);
   const termIds = new Map<string, string>();
+  // Arabic sections per entry, so a translated section can point at the exact Arabic sense it translates
+  const arabicSections = new Map<string, string[]>();
+  for (const r of records) if (r.language === 'ar') arabicSections.set(r.wordId, r.sections.map((s) => s.label));
 
   // Arabic first, so translations can link to their term
   const ordered = [...records].sort((a, b) => (a.language === 'ar' ? 0 : 1) - (b.language === 'ar' ? 0 : 1));
@@ -80,14 +83,26 @@ export async function loadDictionary(records: DictionaryRecord[], store: IngestS
     report.documents[action] = (report.documents[action] ?? 0) + 1;
 
     if (action === 'inserted' || action === 'updated') {
-      const chunks = r.sections.map((s, i) => ({
-        chunk_index: i,
-        language: r.language,
-        content_type: 'terminology' as const,
-        heading,
-        content: `${heading}\n${s.text}`,
-        metadata: { section_label: s.label, references: s.references, word_id: r.wordId, source_url: r.url },
-      }));
+      const chunks = r.sections.map((s, i) => {
+        // Each published section is its own sense/definition (with its own source and field); never merged.
+        const arIndex = r.language === 'ar' ? -1 : (arabicSections.get(r.wordId) ?? []).indexOf(s.label);
+        return {
+          chunk_index: i,
+          language: r.language,
+          content_type: 'terminology' as const,
+          heading,
+          content: `${heading}\n${s.text}`,
+          metadata: {
+            section_label: s.label,
+            references: s.references,
+            word_id: r.wordId,
+            categories: r.categories.map((c) => c.name),
+            source_url: r.url,
+            // translation → the Arabic section with the same published label (null if the Arabic page has none)
+            translation_of_section: r.language === 'ar' ? null : arIndex >= 0 ? { external_ref: `word:${r.wordId}`, chunk_index: arIndex, section_label: s.label } : null,
+          },
+        };
+      });
       await store.replaceChunks(documentId, chunks);
       report.chunks += chunks.length;
     }
