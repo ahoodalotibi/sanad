@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { nativeName } from '../i18n/languages';
 import { api, ApiError, type AnswerItem, type AskTurn, type ReferReason } from '../lib/api';
-import { signOut, useSession } from '../lib/auth';
+import { signOut, takePending, useSession } from '../lib/auth';
 import { go, usePrefs, useRoute } from '../lib/prefs';
 import { canListen, useDictation } from '../lib/speech';
 import { Dialog, LanguagePicker, SettingsDialog, Toast } from '../ui/common';
@@ -171,6 +171,18 @@ export function Site() {
   const [toast, setToast] = useState<string | null>(null);
   const [languages, setLanguages] = useState<string[]>([]);
 
+  const { session } = useSession();
+  // a question confirmed before signing in is sent as soon as there is a session
+  useEffect(() => {
+    if (!session) return;
+    const pending = takePending();
+    if (!pending) return;
+    go('/');
+    api
+      .sendReferral(pending)
+      .then((r) => setView({ k: 'sent', reference: r.reference }))
+      .catch(() => setView({ k: 'refer', req: { question: pending.question, language: pending.language, reason: (pending.reason as ReferReason) ?? 'user_request', context: pending.context } }));
+  }, [session]);
   useEffect(() => {
     api.meta().then((m) => setLanguages(Object.keys(m.languages))).catch(() => undefined);
   }, []);

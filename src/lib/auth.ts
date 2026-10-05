@@ -1,5 +1,6 @@
 /**
- * Email one-time-code sign-in (Supabase Auth). The browser only ever holds the public
+ * Passwordless email sign-in (Supabase Auth): the email carries a sign-in link, and also a code
+ * when the project's email template includes one. Opening the link signs this browser in (PKCE). The browser only ever holds the public
  * (publishable) key, fetched from our server; every protected action goes through our server.
  */
 import { createClient, type Session, type SupabaseClient } from '@supabase/supabase-js';
@@ -12,7 +13,7 @@ export function getAuthClient(): Promise<SupabaseClient | null> {
   if (!client) {
     client = api
       .authConfig()
-      .then((c) => createClient(c.url, c.publishableKey, { auth: { persistSession: true, autoRefreshToken: true, storageKey: 'sanad-auth' } }))
+      .then((c) => createClient(c.url, c.publishableKey, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true, flowType: 'pkce', storageKey: 'sanad-auth' } }))
       .catch(() => {
         client = null;
         return null;
@@ -31,7 +32,9 @@ setTokenProvider(async () => {
 export async function sendCode(email: string): Promise<'ok' | 'unavailable' | 'error'> {
   const c = await getAuthClient();
   if (!c) return 'unavailable';
-  const { error } = await c.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+  const portal = window.location.hash.startsWith('#/portal');
+  const emailRedirectTo = `${window.location.origin}/${portal ? '?to=portal' : '?to=my'}`;
+  const { error } = await c.auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo } });
   return error ? 'error' : 'ok';
 }
 
@@ -67,4 +70,30 @@ export function useSession(): { session: Session | null; ready: boolean } {
     };
   }, []);
   return state;
+}
+
+/** After returning from the email link (?to=my / ?to=portal), go to the right page. */
+export function routeAfterEmailLink() {
+  if (typeof window === 'undefined') return;
+  const to = new URLSearchParams(window.location.search).get('to');
+  if (!to) return;
+  const hash = to === 'portal' ? '#/portal' : '#/my';
+  window.history.replaceState(null, '', window.location.pathname + window.location.search.replace(/[?&]to=[^&]*/, '').replace(/^&/, '?') + hash);
+}
+
+/** A referral the asker confirmed before signing in; sent once a session exists (in whichever tab). */
+const PENDING = 'sanad-pending-referral';
+export interface PendingReferral { question: string; language: string; reason?: string; context?: string }
+export function savePending(r: PendingReferral) {
+  try { window.localStorage.setItem(PENDING, JSON.stringify(r)); } catch { /* ignore */ }
+}
+export function takePending(): PendingReferral | null {
+  try {
+    const v = window.localStorage.getItem(PENDING);
+    if (!v) return null;
+    window.localStorage.removeItem(PENDING);
+    return JSON.parse(v) as PendingReferral;
+  } catch {
+    return null;
+  }
 }

@@ -1,7 +1,7 @@
 /** Sending a question to a dāʿī who speaks the asker's language. */
 import { useEffect, useRef, useState } from 'react';
 import { api, type ReferReason } from '../lib/api';
-import { useSession } from '../lib/auth';
+import { savePending, useSession } from '../lib/auth';
 import { usePrefs } from '../lib/prefs';
 import { canListen, useDictation } from '../lib/speech';
 import { SignInDialog } from '../ui/common';
@@ -52,8 +52,11 @@ export function ReferForm({ req, onSent }: { req: ReferRequest; onSent(reference
     if (!text.trim()) return setErr(t.emptyQ);
     if (!consent) return setErr(t.consentErr);
     setErr(null);
-    if (!session) setSignIn(true);
-    else void send();
+    if (!session) {
+      // kept until the asker is signed in (by code here, or by the email link in any tab), then sent once
+      savePending({ question: text.trim(), language: req.language, reason: req.reason, context: req.context });
+      setSignIn(true);
+    } else void send();
   };
 
   return (
@@ -101,7 +104,7 @@ export function ReferForm({ req, onSent }: { req: ReferRequest; onSent(reference
       {err && <div className="err" role="alert">{err}</div>}
       <button className="btn btn-primary btn-block" style={{ marginTop: 20, minHeight: 56 }} onClick={submit} disabled={busy}>{t.sendDaee}</button>
       {!session && <p className="hint">{t.signNote}</p>}
-      {signIn && <SignInDialog onClose={() => setSignIn(false)} onDone={() => (setSignIn(false), void send())} />}
+      {signIn && <SignInDialog onClose={() => setSignIn(false)} onDone={() => setSignIn(false)} />}
     </div>
   );
 }
