@@ -57,7 +57,7 @@ describe('answer path', () => {
     if (item.type !== 'hadith') return;
     expect(item.translation).toBe('source');
     expect(item.textLanguage).toBe('en');
-    expect(item.text).toBe(corpus.items.find((i) => i.id === 't:72602')!.tr.en.text as string);
+    expect(item.text).toBe((corpus.items.find((i) => i.id === 't:72602') as HadithItem).tr.en.text);
     expect(item.arabic.startsWith('عن عمر رضي الله عنه')).toBe(true);
     expect([item.grade, item.takhrij]).toEqual(['صحيح', 'رواه مسلم']);
     expect(item.source.url).toBe('https://islamic-content.com/t/88974');
