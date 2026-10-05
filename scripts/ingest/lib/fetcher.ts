@@ -38,6 +38,35 @@ export class FetchError extends Error {
   }
 }
 
+/**
+ * Minimal robots.txt reader: the rules for "User-agent: *" (and for a group naming "sanad").
+ * Returns the disallowed path prefixes and the crawl delay, if any.
+ */
+export function parseRobots(text: string, agent = 'sanad'): { disallow: string[]; crawlDelayMs: number | null } {
+  const groups: Array<{ agents: string[]; disallow: string[]; delay: number | null }> = [];
+  let cur: (typeof groups)[number] | null = null;
+  let lastWasAgent = false;
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.replace(/#.*/, '').trim();
+    const m = /^([A-Za-z-]+)\s*:\s*(.*)$/.exec(line);
+    if (!m) continue;
+    const key = m[1].toLowerCase();
+    const val = m[2].trim();
+    if (key === 'user-agent') {
+      if (!cur || !lastWasAgent) groups.push((cur = { agents: [], disallow: [], delay: null }));
+      cur.agents.push(val.toLowerCase());
+      lastWasAgent = true;
+      continue;
+    }
+    lastWasAgent = false;
+    if (!cur) continue;
+    if (key === 'disallow' && val) cur.disallow.push(val);
+    if (key === 'crawl-delay' && Number(val) > 0) cur.delay = Number(val) * 1000;
+  }
+  const mine = groups.find((g) => g.agents.some((a) => a !== '*' && agent.toLowerCase().includes(a))) ?? groups.find((g) => g.agents.includes('*'));
+  return { disallow: mine?.disallow ?? [], crawlDelayMs: mine?.delay ?? null };
+}
+
 export const sha256 = (data: Buffer | string) => createHash('sha256').update(data).digest('hex');
 
 /** Maps a URL to a stable file path, e.g. https://x.com/a/b?c=1 → x.com/a/b__c=1.html */
@@ -56,6 +85,20 @@ export class Fetcher {
   readonly opts: Required<FetcherOptions>;
   requests = 0;
   cacheHits = 0;
+  private robots = new Map<string, Promise<{ disallow: string[]; crawlDelayMs: number | null }>>();
+
+  /** Fetches and caches robots.txt rules per origin; a missing robots.txt allows everything. */
+  private rulesFor(origin: string) {
+    if (!this.robots.has(origin)) {
+      this.robots.set(
+        origin,
+        fetch(`${origin}/robots.txt`, { headers: { 'User-Agent': this.opts.userAgent } })
+          .then(async (r) => (r.ok ? parseRobots(await r.text()) : { disallow: [], crawlDelayMs: null }))
+          .catch(() => ({ disallow: [], crawlDelayMs: null }))
+      );
+    }
+    return this.robots.get(origin)!;
+  }
 
   constructor(opts: FetcherOptions) {
     this.opts = {
@@ -92,6 +135,10 @@ export class Fetcher {
       this.cacheHits++;
       return { url, file, body, sha256: sha256(body), bytes: body.length, fromCache: true, contentType: null };
     }
+    const u = new URL(url);
+    const rules = await this.rulesFor(u.origin);
+    if (rules.disallow.some((d) => (u.pathname + u.search).startsWith(d))) throw new FetchError(url, null, 'disallowed by robots.txt');
+    if (rules.crawlDelayMs && rules.crawlDelayMs > this.opts.delayMs) (this.opts as { delayMs: number }).delayMs = rules.crawlDelayMs;
     return this.slot(async () => {
       let lastError: FetchError | null = null;
       for (let attempt = 0; attempt <= this.opts.retries; attempt++) {
@@ -110,6 +157,7 @@ export class Fetcher {
           fs.writeFileSync(full, body);
           return { url, file, body, sha256: sha256(body), bytes: body.length, fromCache: false, contentType: res.headers.get('content-type') };
         } catch (err) {
+          if (err instanceof FetchError && err.message === 'disallowed by robots.txt') throw err;
           if (err instanceof FetchError && (err.status === 404 || (err.status !== null && err.status < 500 && err.status !== 429))) throw err;
           lastError = err instanceof FetchError ? err : new FetchError(url, null, err instanceof Error ? err.message : String(err));
         }

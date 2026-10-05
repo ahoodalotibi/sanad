@@ -68,3 +68,30 @@ describe('blockText', () => {
     expect(blockText(document.querySelector('div') as any)).toBe('أ ب ج\nعنوان\nنص\nسطر');
   });
 });
+
+describe('robots.txt', async () => {
+  const { parseRobots } = await import('../../scripts/ingest/lib/fetcher.ts');
+  const robots = `# islamic-content.com
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /dictionary/
+Disallow: /t/
+Crawl-delay: 10
+
+User-agent: ClaudeBot
+Disallow: /ayah/
+Crawl-delay: 5
+
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+`;
+  it('applies the rules for everyone else to SANAD', () => {
+    expect(parseRobots(robots)).toEqual({ disallow: ['/admin/', '/api/'], crawlDelayMs: null });
+  });
+  it('picks a group that names the agent', () => {
+    expect(parseRobots(robots, 'amazonbot')).toEqual({ disallow: ['/dictionary/', '/t/'], crawlDelayMs: 10000 });
+  });
+});

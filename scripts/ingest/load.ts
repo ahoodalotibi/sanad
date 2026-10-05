@@ -3,6 +3,7 @@
  *
  *   npm run ingest:load -- --source=dictionary     data/ingest/jamharah-dictionary/entries.jsonl
  *   npm run ingest:load -- --source=bayyinat       data/ingest/bayyinat/qa.jsonl
+ *   npm run ingest:load -- --source=hadith         data/ingest/jamharah-hadith/hadith.jsonl
  *   add --dry to run the whole mapping in memory without touching the database.
  *
  * Needs SUPABASE_URL and SUPABASE_SECRET_KEY (server-side secret, see .env.example) and the
@@ -16,6 +17,8 @@ import { parseArgs, readJsonl, writeJson } from './lib/cli.ts';
 import { createMemoryIngestStore, createSupabaseIngestStore, type IngestStore } from './lib/store.ts';
 import { loadDictionary } from './jamharah/load.ts';
 import { loadBayyinat } from './bayyinat/load.ts';
+import { loadHadith } from './jamharah/hadith-load.ts';
+import type { HadithRecord } from './jamharah-hadith.ts';
 import type { DictionaryRecord } from './jamharah-dictionary.ts';
 import type { BayyinatRecord } from './bayyinat.ts';
 
@@ -23,6 +26,7 @@ const args = parseArgs();
 const SOURCES = {
   dictionary: { dir: 'data/ingest/jamharah-dictionary', file: 'entries.jsonl' },
   bayyinat: { dir: 'data/ingest/bayyinat', file: 'qa.jsonl' },
+  hadith: { dir: 'data/ingest/jamharah-hadith', file: 'hadith.jsonl' },
 } as const;
 
 async function main() {
@@ -53,7 +57,11 @@ async function main() {
 
   console.log(`Loading ${rows.length} record(s) from ${path.relative(process.cwd(), file)} → ${target}`);
   const report: { documents: Record<string, number>; chunks: number; skipped: unknown[]; terms?: number; termTranslations?: number } =
-    key === 'dictionary' ? await loadDictionary(rows as DictionaryRecord[], store) : await loadBayyinat(rows as BayyinatRecord[], store);
+    key === 'dictionary'
+      ? await loadDictionary(rows as DictionaryRecord[], store)
+      : key === 'hadith'
+        ? await loadHadith(rows as HadithRecord[], store)
+        : await loadBayyinat(rows as BayyinatRecord[], store);
   writeJson(path.join(dir, dry ? 'load-report.dry.json' : 'load-report.json'), { status: dry ? 'dry_run' : 'loaded', target, at: new Date().toISOString(), ...report });
   const extra = report.terms !== undefined ? `, ${report.terms} terms, ${report.termTranslations} term translations` : '';
   console.log(`✓ ${JSON.stringify(report.documents)} documents, ${report.chunks} chunks${extra}, ${report.skipped.length} skipped`);

@@ -23,7 +23,8 @@
     "rag:embed": "tsx scripts/rag/embed-chunks.ts",
     "ingest:dictionary": "tsx scripts/ingest/jamharah-dictionary.ts",
     "ingest:load": "tsx scripts/ingest/load.ts",
-    "ingest:bayyinat": "tsx scripts/ingest/bayyinat.ts"
+    "ingest:bayyinat": "tsx scripts/ingest/bayyinat.ts",
+    "ingest:hadith": "tsx scripts/ingest/jamharah-hadith.ts"
   },
   "dependencies": {
     "@fontsource/amiri-quran": "^5.3.0",
