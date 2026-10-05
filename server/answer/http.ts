@@ -26,6 +26,9 @@ export interface AnswerService {
   index: SearchIndex | null;
   llm: Llm | null;
   error: string | null;
+  /** last model problem (provider message, never the key) — shown in /api/meta to diagnose */
+  modelIssue?: { at: string; message: string } | null;
+  modelOkAt?: string | null;
 }
 
 export function createAnswerService(corpusFile = process.env.CORPUS_FILE || path.resolve('data/corpus/corpus.json.gz')): AnswerService {
@@ -45,7 +48,16 @@ export function askHandler(service: AnswerService, limiter = createRateLimiter(2
     if (!parsed.success) return res.status(400).json({ code: 'INVALID_INPUT' });
     if (!service.corpus || !service.index) return res.status(503).json({ code: 'CORPUS_MISSING' });
     try {
-      const { response, trace } = await answer(parsed.data, { corpus: service.corpus, index: service.index, llm: service.llm, log: console.warn });
+      const { response, trace } = await answer(parsed.data, {
+        corpus: service.corpus,
+        index: service.index,
+        llm: service.llm,
+        log: (m) => {
+          console.warn(m);
+          service.modelIssue = { at: new Date().toISOString(), message: m.replace(/\s+/g, ' ').slice(0, 300) };
+        },
+      });
+      if (trace.usedModel) service.modelOkAt = new Date().toISOString();
       // operational log without the question text (privacy)
       console.info(`[ask] ${response.kind} lang=${trace.language} cat=${trace.category} model=${trace.usedModel} selected=${trace.selected.join(',') || '-'}`);
       return res.json(response);
@@ -61,6 +73,8 @@ export function metaHandler(service: AnswerService) {
     res.json({
       ready: !!service.corpus,
       model: !!service.llm,
+      modelOkAt: service.modelOkAt ?? null,
+      modelIssue: service.modelIssue ?? null,
       items: service.corpus?.items.length ?? 0,
       languages: service.corpus ? corpusLanguages(service.corpus) : {},
       builtAt: service.corpus?.builtAt ?? null,
