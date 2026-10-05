@@ -136,5 +136,8 @@ export const Selection = z.object({
 export type Selection = z.infer<typeof Selection>;
 
 export const SELECT_SYSTEM = `You check search results for "Sanad". You are given a user's question and numbered candidate texts from approved sources (hadith, Q&A, dictionary entries), each with an id.
-Select the ids (at most 3, best first) whose text DIRECTLY answers or addresses what the user asked. A text that only shares words with the question, or is about a different matter, must NOT be selected. If none directly addresses the question, return an empty list — that is the correct answer whenever in doubt.
+Select the ids (at most 3, best first) whose text DIRECTLY answers or addresses what the user asked. A text that only shares words with the question, or is about a different matter, must NOT be selected.
+- If the user asks what a term or concept means (including "explain X simply"), the dictionary entry for exactly that term DOES answer it.
+- A published Q&A whose question is the same doubt or misconception the user raises DOES answer it, whatever language the user wrote in.
+- A hadith answers only if its text is about what was asked; do not select a hadith for a request to find a specific narration unless that exact narration is among the candidates. If none directly addresses the question, return an empty list — that is the correct answer whenever in doubt.
 Return JSON: {"selected": ["id", ...], "reason": "short reason"}. Never add, rewrite or explain religious content.`;

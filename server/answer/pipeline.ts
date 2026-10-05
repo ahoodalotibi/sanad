@@ -73,7 +73,10 @@ export async function answer(req: AskRequest, deps: AnswerDeps): Promise<{ respo
 
   // 3. Search the approved corpus (original question + model keywords in Arabic and English)
   const queries = [q, ...(u ? [u.keywords_ar.join(' '), u.keywords_en.join(' ')] : [])].filter((x) => x.trim());
-  const hits = deps.index.search(queries, { limit: 8 });
+  // candidates from each kind of source, so 12,000+ glossary terms cannot crowd out hadith and Q&A
+  const hits = deps.llm && u
+    ? [...deps.index.search(queries, { limit: 4, kinds: ['qa'] }), ...deps.index.search(queries, { limit: 4, kinds: ['hadith'] }), ...deps.index.search(queries, { limit: 4, kinds: ['term'] })].sort((a, b) => b.score - a.score)
+    : deps.index.search(queries, { limit: 8 });
   trace.hits = hits.map((h) => ({ id: h.item.id, score: Math.round(h.score * 100) / 100, coverage: Math.round(h.coverage * 100) / 100 }));
 
   // 4. Select what directly answers
