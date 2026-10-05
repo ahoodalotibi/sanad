@@ -1286,7 +1286,7 @@ export type Database = {
           term_ar: string;
           term_normalized: string | null;
           updated_at: string;
-          usage_guideline_ar: string;
+          usage_guideline_ar: string | null;
         };
         Insert: {
           created_at?: string;
@@ -1298,7 +1298,7 @@ export type Database = {
           term_ar: string;
           term_normalized?: never;
           updated_at?: string;
-          usage_guideline_ar: string;
+          usage_guideline_ar?: string | null;
         };
         Update: {
           created_at?: string;
@@ -1310,7 +1310,7 @@ export type Database = {
           term_ar?: string;
           term_normalized?: never;
           updated_at?: string;
-          usage_guideline_ar?: string;
+          usage_guideline_ar?: string | null;
         };
         Relationships: [
           {

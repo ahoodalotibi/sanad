@@ -21,3 +21,6 @@ node_modules.zip
 node_modules.zip
 
 .env
+
+# Ingestion: original downloaded pages/files stay local; extracted JSONL + reports are kept
+data/ingest/**/raw/
