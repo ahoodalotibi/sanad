@@ -1,8 +1,8 @@
 /**
- * Passwordless email sign-in (Supabase Auth) with a one-time code (the email template shows {{ .Token }}).
- * If an email still carries a sign-in link, opening it also works
- * when the project's email template includes one. Opening the link signs this browser in (PKCE). The browser only ever holds the public
- * (publishable) key, fetched from our server; every protected action goes through our server.
+ * Passwordless email sign-in (Supabase Auth) with a one-time code: the email template shows {{ .Token }}.
+ * If an email carries a sign-in link instead, opening it also signs this browser in (PKCE).
+ * The browser only holds the public (publishable) key, fetched from our server; every protected
+ * action goes through our server.
  */
 import { createClient, type Session, type SupabaseClient } from '@supabase/supabase-js';
 import { useEffect, useState } from 'react';
