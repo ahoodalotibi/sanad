@@ -1,5 +1,6 @@
 /**
- * Passwordless email sign-in (Supabase Auth): the email carries a sign-in link, and also a code
+ * Passwordless email sign-in (Supabase Auth) with a one-time code (the email template shows {{ .Token }}).
+ * If an email still carries a sign-in link, opening it also works
  * when the project's email template includes one. Opening the link signs this browser in (PKCE). The browser only ever holds the public
  * (publishable) key, fetched from our server; every protected action goes through our server.
  */

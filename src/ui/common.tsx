@@ -84,8 +84,6 @@ export function SignInDialog({ onClose, onDone, note }: { onClose(): void; onDon
           <p style={{ marginTop: 0, color: 'var(--ink-2)' }}>
             {t.otpBody} <b dir="ltr">{email}</b>
           </p>
-          <p style={{ color: 'var(--ink-2)' }}>{t.linkBody}</p>
-          <div style={{ fontSize: 14, color: 'var(--ink-3)', marginBottom: 6 }}>{t.codeLabel}</div>
           <input className="input otp" inputMode="numeric" autoComplete="one-time-code" dir="ltr" maxLength={10} value={code} onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))} aria-label={t.otpTitle} />
           {err && <div className="err" role="alert">{err}</div>}
           <button className="btn btn-primary btn-block" style={{ marginTop: 18 }} disabled={busy || code.length < 6}>{t.verify}</button>
