@@ -20,6 +20,8 @@ export interface SearchHit {
   score: number;
   /** share of the query's content words found in this entry (0–1) */
   coverage: number;
+  /** number of content words in the query that matched best */
+  terms: number;
 }
 
 const K1 = 1.2;
@@ -88,7 +90,7 @@ export class SearchIndex {
         if (!matched) continue;
         const coverage = matched / terms.length;
         const prev = best.get(e.item.id);
-        if (!prev || score > prev.score) best.set(e.item.id, { item: e.item, language: e.language, score, coverage: Math.max(coverage, prev?.coverage ?? 0) });
+        if (!prev || score > prev.score) best.set(e.item.id, { item: e.item, language: e.language, score, coverage: Math.max(coverage, prev?.coverage ?? 0), terms: terms.length });
       }
     }
     return [...best.values()].sort((a, b) => b.score - a.score).slice(0, opts.limit ?? 10);

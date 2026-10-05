@@ -25,7 +25,8 @@
     "ingest:bayyinat": "tsx scripts/ingest/bayyinat.ts",
     "ingest:hadith": "tsx scripts/ingest/jamharah-hadith.ts",
     "corpus:build": "tsx scripts/corpus/build.ts",
-    "admin:grant": "tsx scripts/admin/grant.mts"
+    "admin:grant": "tsx scripts/admin/grant.mts",
+    "eval:guide": "tsx scripts/eval/run-guide.mts"
   },
   "dependencies": {
     "@fontsource/amiri": "^5.3.0",

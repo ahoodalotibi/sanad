@@ -1,0 +1,786 @@
+{
+  "builtAt": "2026-10-05T17:39:36.772Z",
+  "languages": {
+    "ar": 13892,
+    "bn": 713,
+    "bs": 1261,
+    "en": 8461,
+    "es": 1185,
+    "fa": 929,
+    "fr": 1577,
+    "id": 1707,
+    "ru": 1674,
+    "tr": 854,
+    "ur": 1597,
+    "zh": 824
+  },
+  "hadith": {
+    "accepted": 944,
+    "rejected": 90,
+    "rejectionReasons": {
+      "grade not accepted for answers": 90
+    },
+    "rejectedItems": [
+      {
+        "ok": false,
+        "id": "t:71961",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:71975",
+        "reasons": [
+          "grade not accepted for answers: صحيح موقوفًا على أبي بكر الصديق رضي الله عنه"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72059",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72062",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72071",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72084",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72095",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72097",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72098",
+        "reasons": [
+          "grade not accepted for answers: ضعيف جدا"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72119",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72150",
+        "reasons": [
+          "grade not accepted for answers: صحيح. ملحوظة: لم نجد له حكما للألباني، ولكن قال ابن حجر: (سنده قوي). وقال سليمان آل الشيخ: (وسنده جيد). العجاب في بيان الأسباب (ص 51)، تيسير العزيز الحميد (ص587)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72157",
+        "reasons": [
+          "grade not accepted for answers: لم أجد له حكماً عند الألباني"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72171",
+        "reasons": [
+          "grade not accepted for answers: حسنه الألباني في المشكاة وضعفه في السلسلة الضعيفة وإرواء الغليل وضعيف الجامع وأحكام الجنائز وتمام المنة"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72189",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72193",
+        "reasons": [
+          "grade not accepted for answers: إسناده ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72201",
+        "reasons": [
+          "grade not accepted for answers: إسناده ضعيف. ملحوظة: هذا حكم محققي المسند، ولم نجد حكماً للألباني"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72208",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72214",
+        "reasons": [
+          "grade not accepted for answers: نقل الألباني تصحيحه عن ابن تيمية ولم يتعقبه"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72242",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72254",
+        "reasons": [
+          "grade not accepted for answers: الحديث الأول: صحيح. الحديث الثاني: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72264",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72377",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72428",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72541",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72614",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72686",
+        "reasons": [
+          "grade not accepted for answers: ضعيف الإسناد"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72759",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72765",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72936",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:72943",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73032",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73036",
+        "reasons": [
+          "grade not accepted for answers: الآثار صحيحة. تنبيه: أثر عمر صححه الألباني رحمه الله. وأما أثر حفصة؛ فصححه الإمام محمد بن عبد الوهاب رحمه الله. وأما أثر جُنْدُب؛ فصححه الإمام محمد بن عبد الوهاب رحمه الله، والألباني"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73045",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73046",
+        "reasons": [
+          "grade not accepted for answers: لم أجد من حكم على الأثر"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73065",
+        "reasons": [
+          "grade not accepted for answers: صحيح، ولكن الزيادة ضعيفة، وهي الدعاء بـ(اللهم أعنّي على غَمَراتِ الموت أو سَكَرات الموت)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73132",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73248",
+        "reasons": [
+          "grade not accepted for answers: المرفوع ضعيف والموقوف حسن"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73286",
+        "reasons": [
+          "grade not accepted for answers: حديث عائشة وبريدة صحيحان، وحديث ابن عباس ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73401",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73405",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73418",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73434",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73457",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73506",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73516",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73517",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73520",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73523",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73536",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73537",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73538",
+        "reasons": [
+          "grade not accepted for answers: منكر"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73568",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73874",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73877",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73921",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73948",
+        "reasons": [
+          "grade not accepted for answers: منكر"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73967",
+        "reasons": [
+          "grade not accepted for answers: صحيح دون ذكر السنين"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73968",
+        "reasons": [
+          "grade not accepted for answers: منكر"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73969",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73984",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73986",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73987",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73988",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:73996",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74013",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74014",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74017",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74019",
+        "reasons": [
+          "grade not accepted for answers: إسناده ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74028",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74031",
+        "reasons": [
+          "grade not accepted for answers: قال الهيثمي في مجمع الزوائد: رجاله رجال الصحيح"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74037",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74054",
+        "reasons": [
+          "grade not accepted for answers: لم أجد حكما للشيخ الألباني"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74059",
+        "reasons": [
+          "grade not accepted for answers: رجح البيهقي أنه موقوف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74070",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74078",
+        "reasons": [
+          "grade not accepted for answers: لم نجد له حكمًا عند الشيخ الألباني. وقال ابن حجر: (صححه ابن القطان, ورجاله ثقات, إلا أن البيهقي رجح المرسل)"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74080",
+        "reasons": [
+          "grade not accepted for answers: ضعيف مرفوعا, ويصح موقوفا. ولم أقف على حكم للشيخ الألباني رحمه الله على هذا الحديث"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74087",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74102",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74110",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74111",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74112",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74163",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74165",
+        "reasons": [
+          "grade not accepted for answers: إسناده ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74178",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74181",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74184",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74186",
+        "reasons": [
+          "grade not accepted for answers: ضعفه الحافظ ابن حجر في البلوغ عقب تخريجه"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74187",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74195",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "t:74196",
+        "reasons": [
+          "grade not accepted for answers: ضعيف"
+        ]
+      }
+    ],
+    "warnings": []
+  },
+  "bayyinat": {
+    "accepted": 259,
+    "rejected": 3,
+    "rejectionReasons": {
+      "N Quran quotation(s) without a sura:ayah reference": 3
+    },
+    "rejectedItems": [
+      {
+        "ok": false,
+        "id": "bayenat:750",
+        "reasons": [
+          "1 Quran quotation(s) without a sura:ayah reference"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "bayenat:926",
+        "reasons": [
+          "1 Quran quotation(s) without a sura:ayah reference"
+        ]
+      },
+      {
+        "ok": false,
+        "id": "bayenat:969",
+        "reasons": [
+          "1 Quran quotation(s) without a sura:ayah reference"
+        ]
+      }
+    ],
+    "warnings": [
+      {
+        "id": "bayenat:724",
+        "warnings": [
+          "same question text as bayenat:733"
+        ]
+      },
+      {
+        "id": "bayenat:726",
+        "warnings": [
+          "same question text as bayenat:748"
+        ]
+      },
+      {
+        "id": "bayenat:727",
+        "warnings": [
+          "1 short Quran phrase(s) quoted without their own reference"
+        ]
+      },
+      {
+        "id": "bayenat:728",
+        "warnings": [
+          "same question text as bayenat:751"
+        ]
+      },
+      {
+        "id": "bayenat:729",
+        "warnings": [
+          "same question text as bayenat:752"
+        ]
+      },
+      {
+        "id": "bayenat:733",
+        "warnings": [
+          "same question text as bayenat:724"
+        ]
+      },
+      {
+        "id": "bayenat:748",
+        "warnings": [
+          "same question text as bayenat:726"
+        ]
+      },
+      {
+        "id": "bayenat:751",
+        "warnings": [
+          "same question text as bayenat:728"
+        ]
+      },
+      {
+        "id": "bayenat:752",
+        "warnings": [
+          "same question text as bayenat:729"
+        ]
+      },
+      {
+        "id": "bayenat:808",
+        "warnings": [
+          "same question text as bayenat:880"
+        ]
+      },
+      {
+        "id": "bayenat:809",
+        "warnings": [
+          "same question text as bayenat:877"
+        ]
+      },
+      {
+        "id": "bayenat:853",
+        "warnings": [
+          "1 short Quran phrase(s) quoted without their own reference"
+        ]
+      },
+      {
+        "id": "bayenat:877",
+        "warnings": [
+          "same question text as bayenat:809"
+        ]
+      },
+      {
+        "id": "bayenat:880",
+        "warnings": [
+          "same question text as bayenat:808"
+        ]
+      },
+      {
+        "id": "bayenat:884",
+        "warnings": [
+          "2 short Quran phrase(s) quoted without their own reference"
+        ]
+      }
+    ]
+  },
+  "dictionary": {
+    "accepted": 12689,
+    "rejected": 0,
+    "rejectionReasons": {},
+    "rejectedItems": [],
+    "warnings": []
+  }
+}

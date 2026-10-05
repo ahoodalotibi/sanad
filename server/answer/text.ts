@@ -46,6 +46,8 @@ export const STOPWORDS = new Set(
     'the', 'a', 'an', 'is', 'are', 'was', 'were', 'what', 'why', 'how', 'who', 'do', 'does', 'did', 'of', 'in', 'on', 'to', 'for', 'and', 'or', 'it', 'this', 'that', 'be', 'can', 'about', 'with', 'i', 'you', 'me', 'my', 'we', 'muslims', 'islam',
     // ur
     'کیا', 'ہے', 'ہیں', 'کے', 'کی', 'کا', 'میں', 'سے', 'کو', 'اور', 'یہ', 'وہ', 'نے', 'پر',
+    // "what does X mean" words (several languages) — the term itself is what matters
+    'معنى', 'معني', 'تعريف', 'مفهوم', 'المقصود', 'يعني', 'mean', 'means', 'meaning', 'definition', 'define', 'term', 'مطلب', 'معنی', 'signifie', 'arti', 'nedir', 'significa',
     // fr / id / tr / es (a few)
     'le', 'la', 'les', 'de', 'des', 'du', 'est', 'et', 'que', 'pourquoi', 'yang', 'dan', 'apa', 'di', 'ini', 'itu', 'bir', 've', 'ne', 'mi', 'el', 'los', 'por', 'qué',
   ].map((w) => normalizeArabic(w))

@@ -14,9 +14,12 @@ import type { SearchHit, SearchIndex } from './search.ts';
 import { contentTokens, detectLanguage } from './text.ts';
 
 export const MAX_CLARIFICATIONS = 2;
-/** Without a model, a hit must reach both thresholds to be shown. */
-export const FALLBACK_MIN_SCORE = 6;
-export const FALLBACK_MIN_COVERAGE = 0.6;
+/**
+ * Without a model nobody checks that a text really answers the question, so only a near-exact
+ * match is shown (every content word of the question found in the text); otherwise → a daee.
+ */
+export const FALLBACK_MIN_SCORE = 8;
+export const FALLBACK_MIN_COVERAGE = 0.9;
 
 export interface AnswerDeps {
   index: SearchIndex;
@@ -82,10 +85,10 @@ export async function answer(req: AskRequest, deps: AnswerDeps): Promise<{ respo
       selected = sel.selected.map((id) => byId.get(id)).filter((x): x is CorpusItem => !!x);
     } catch (err) {
       deps.log?.(`[answer] select failed, using scores: ${(err as Error).message}`);
-      selected = fallbackSelect(hits);
+      selected = fallbackSelect(hits, q);
     }
   } else {
-    selected = fallbackSelect(hits);
+    selected = fallbackSelect(hits, q);
   }
   trace.selected = selected.map((s) => s.id);
   if (!selected.length) return done({ kind: 'refer', language, reason: 'not_found' });
@@ -96,10 +99,33 @@ export async function answer(req: AskRequest, deps: AnswerDeps): Promise<{ respo
   return done({ kind: 'answer', language, items, offerReferral });
 }
 
-function fallbackSelect(hits: SearchHit[]): CorpusItem[] {
-  const top = hits[0];
-  return top && top.score >= FALLBACK_MIN_SCORE && top.coverage >= FALLBACK_MIN_COVERAGE ? [top.item] : [];
+/**
+ * Without a model: show a text only when the question is essentially its title — a glossary term
+ * whose name is the question's words, or a published Q&A whose question (or listed similar question)
+ * contains every content word. Hadith are never chosen without a model (matching words in a narration
+ * says nothing about whether it answers the question).
+ */
+function fallbackSelect(hits: SearchHit[], question: string): CorpusItem[] {
+  const want = new Set(contentTokens(question));
+  if (want.size === 0) return [];
+  for (const h of hits.slice(0, 5)) {
+    if (h.score < FALLBACK_MIN_SCORE || h.coverage < FALLBACK_MIN_COVERAGE) continue;
+    if (titleMatches(h.item, want)) return [h.item];
+  }
+  return [];
 }
+
+function titleMatches(it: CorpusItem, want: Set<string>): boolean {
+  const versions = it.kind === 'hadith' ? [] : [it.ar, ...Object.values(it.tr)];
+  const titles = versions.flatMap((v) => (it.kind === 'qa' ? [(v as QaVersion).question, ...(v as QaVersion).similar] : it.kind === 'term' ? [(v as { title: string }).title] : []));
+  const covers = (title: string) => {
+    const have = new Set(contentTokens(title));
+    const hit = [...want].filter((w) => have.has(w)).length;
+    return it.kind === 'term' ? hit === want.size && hit === have.size : hit === want.size;
+  };
+  return titles.some(covers);
+}
+type QaVersion = { question: string; similar: string[] };
 
 const clip = (s: string | null | undefined, n: number) => (s ? (s.length > n ? s.slice(0, n) + '…' : s) : '');
 

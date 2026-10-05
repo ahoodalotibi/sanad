@@ -112,9 +112,15 @@ describe('answer path', () => {
     expect((await answer({ question: 'weather tomorrow?' }, deps(fakeLlm(understood({ category: 'out_of_scope' }))))).response).toMatchObject({ kind: 'refer', reason: 'out_of_scope' });
   });
 
-  it('without a model, answers only on a strong match and refers otherwise', async () => {
-    const strong = await answer({ question: 'سفك الدماء الملائكة الأرض يفسد' }, deps(null));
+  it('without a model, answers only when the question is a published question (title match) and refers otherwise', async () => {
+    const strong = await answer({ question: 'كيف عرفت الملائكة أن الإنسان سيفسد في الأرض ويسفك الدماء قبل أن يخلق؟' }, deps(null));
     expect(strong.response).toMatchObject({ kind: 'answer' });
+    // the same words scattered do not count as an answer without a model
+    const scattered = await answer({ question: 'سفك الدماء الملائكة الأرض يفسد' }, deps(null));
+    expect(scattered.response).toMatchObject({ kind: 'refer', reason: 'not_found' });
+    // hadith are never chosen without a model
+    const hadith = await answer({ question: 'أخبرني عن الإسلام والإيمان والإحسان' }, deps(null));
+    expect(hadith.response.kind).toBe('refer');
     const weak = await answer({ question: 'What is the capital of France?' }, deps(null));
     expect(weak.response).toMatchObject({ kind: 'refer', reason: 'not_found' });
   });

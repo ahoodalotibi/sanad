@@ -24,3 +24,6 @@ node_modules.zip
 
 # Ingestion: original downloaded pages/files stay local; extracted JSONL + reports are kept
 data/ingest/**/raw/
+# extracted JSONL is large (the dictionary alone is >100 MB, over GitHub's limit); reports are kept.
+# The served answers come from data/corpus/corpus.json.gz, which is committed.
+data/ingest/**/*.jsonl
