@@ -12,7 +12,7 @@
  */
 import path from 'node:path';
 import { parseHTML } from 'linkedom';
-import { intArg, parseArgs, progress, writeJson, writeJsonl } from './lib/cli.ts';
+import { intArg, parseArgs, progress, writeJson, writeJsonl, detach } from './lib/cli.ts';
 import { Fetcher, mapAll } from './lib/fetcher.ts';
 import { JAMHARAH, parseHadithIndex, parseHadithPage, parseTopicPage, type HadithPage } from './jamharah/hadith-parse.ts';
 
@@ -65,7 +65,7 @@ async function main() {
       const page = await fetcher.get(url);
       const h = parseHadithPage(doc(page.body), url);
       if (!h.text) throw new Error('no hadith text on the page');
-      records.push({ ...h, language: 'ar', sourceHadithId: id, topics: [...(hadithTopics.get(id) ?? [])], raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() });
+      records.push(detach({ ...h, language: 'ar', sourceHadithId: id, topics: [...(hadithTopics.get(id) ?? [])], raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() }));
     },
     progress('hadiths (ar)')
   );
@@ -88,7 +88,7 @@ async function main() {
       const page = await fetcher.get(job.url);
       const h = parseHadithPage(doc(page.body), job.url);
       if (!h.text) throw new Error('empty translation page');
-      records.push({ ...h, language: job.language, sourceHadithId: job.arId, topics: job.topics, raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() });
+      records.push(detach({ ...h, language: job.language, sourceHadithId: job.arId, topics: job.topics, raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() }));
     },
     progress('translations')
   );

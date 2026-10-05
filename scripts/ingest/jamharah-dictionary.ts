@@ -15,7 +15,7 @@
  */
 import path from 'node:path';
 import { parseHTML } from 'linkedom';
-import { intArg, parseArgs, progress, writeJson, writeJsonl } from './lib/cli.ts';
+import { intArg, parseArgs, progress, writeJson, writeJsonl, detach } from './lib/cli.ts';
 import { Fetcher, mapAll } from './lib/fetcher.ts';
 import { JAMHARAH_ORIGIN, parseCategoryPage, parseDictionaryIndex, parseWordPage, wordUrl, type DictionaryCategory, type DictionaryEntry } from './jamharah/parse.ts';
 
@@ -78,7 +78,7 @@ async function main() {
       const entry = parseWordPage(doc(page.body), url);
       if (entry.sections.length === 0) throw new Error('no published definition on the page');
       const rec: DictionaryRecord = { ...entry, sourceWordId: id, raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() };
-      records.push(rec);
+      records.push(detach(rec));
       return rec;
     },
     progress('arabic entries')
@@ -93,7 +93,7 @@ async function main() {
       const page = await fetcher.get(job.url);
       const entry = parseWordPage(doc(page.body), job.url);
       if (entry.sections.length === 0 && !entry.title) throw new Error('empty translation page');
-      records.push({ ...entry, sourceWordId: job.wordId, raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() });
+      records.push(detach({ ...entry, sourceWordId: job.wordId, raw: { file: page.file, sha256: page.sha256 }, fetchedAt: now() }));
     },
     progress('translations')
   );

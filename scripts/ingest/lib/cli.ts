@@ -47,3 +47,9 @@ export function progress(label: string) {
     }
   };
 }
+
+/**
+ * Returns a deep copy with fresh strings. Text pulled out of a parsed page can keep the entire
+ * page's HTML alive in memory (V8 sliced strings); copying lets each page be freed after parsing.
+ */
+export const detach = <T,>(value: T): T => JSON.parse(JSON.stringify(value)) as T;

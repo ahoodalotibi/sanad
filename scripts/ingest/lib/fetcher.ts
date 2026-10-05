@@ -167,19 +167,28 @@ export class Fetcher {
   }
 }
 
-/** Runs `fn` over items with the fetcher doing the rate limiting; collects errors instead of stopping. */
-export async function mapAll<T, R>(items: T[], fn: (item: T, i: number) => Promise<R>, onProgress?: (done: number, total: number) => void): Promise<Array<R | Error>> {
+/**
+ * Runs `fn` over items with at most `limit` in flight (the fetcher also rate-limits network calls);
+ * collects errors instead of stopping. The limit matters when pages come from the local cache:
+ * without it every saved page would be read and parsed at the same time.
+ */
+export async function mapAll<T, R>(items: T[], fn: (item: T, i: number) => Promise<R>, onProgress?: (done: number, total: number) => void, limit = 8): Promise<Array<R | Error>> {
+  const results: Array<R | Error> = new Array(items.length);
+  let next = 0;
   let done = 0;
-  return Promise.all(
-    items.map(async (item, i) => {
+  const worker = async () => {
+    while (next < items.length) {
+      const i = next++;
       try {
-        return await fn(item, i);
+        results[i] = await fn(items[i], i);
       } catch (err) {
-        return err instanceof Error ? err : new Error(String(err));
+        results[i] = err instanceof Error ? err : new Error(String(err));
       } finally {
         done++;
         onProgress?.(done, items.length);
       }
-    })
-  );
+    }
+  };
+  await Promise.all(Array.from({ length: Math.max(1, Math.min(limit, items.length)) }, worker));
+  return results;
 }

@@ -11,7 +11,7 @@
  */
 import path from 'node:path';
 import { parseHTML } from 'linkedom';
-import { intArg, parseArgs, progress, writeJson, writeJsonl } from './lib/cli.ts';
+import { intArg, parseArgs, progress, writeJson, writeJsonl, detach } from './lib/cli.ts';
 import { Fetcher, mapAll } from './lib/fetcher.ts';
 import { RELATED_BOOK, parseQaPage, parseSourcePage, sourcePageUrl, type BayyinatQa } from './bayyinat/parse.ts';
 
@@ -52,7 +52,7 @@ async function main() {
   const records: BayyinatRecord[] = [];
   const now = () => new Date().toISOString();
   const add = (qa: BayyinatQa, sourceItemId: string, file: string, sha: string) =>
-    records.push({ ...qa, sourceItemId, relatedBook: RELATED_BOOK, raw: { file, sha256: sha }, fetchedAt: now() });
+    records.push(detach({ ...qa, sourceItemId, relatedBook: RELATED_BOOK, raw: { file, sha256: sha }, fetchedAt: now() }));
 
   const ar = await mapAll(
     urls,
