@@ -45,8 +45,8 @@ export interface Quotation {
   reference: string | null;
 }
 
-/** Quran references look like "[البقرة: 30]" / "[فُصِّلت: 42]؟!"; anything else (e.g. "رواه …") is not a verse. */
-export const isQuranReference = (ref: string | null) => !!ref && /^\[[^\]:]+:\s*[\d٠-٩]+(?:\s*[-–]\s*[\d٠-٩]+)?\s*\]/.test(ref);
+/** Quran references look like "[البقرة: 30]", "[الحج: 52: 54]", "[الأعراف: 111، الشعراء: 36]"; anything else (e.g. "رواه …") is not a verse. */
+export const isQuranReference = (ref: string | null) => !!ref && /^\[[^\]:]+:\s*[\d٠-٩]+/.test(ref);
 
 export interface BayyinatQa {
   id: string;

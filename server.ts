@@ -6,9 +6,9 @@ import express from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createAskHandler } from './server/api/ask.ts';
+import { askHandler, createAnswerService, metaHandler } from './server/answer/http.ts';
 import { getServiceClient, isSupabaseConfigured, pingDatabase } from './server/db/index.ts';
-import { getRagDeps, isRagConfigured } from './server/rag/index.ts';
+import { isRagConfigured } from './server/rag/index.ts';
 
 dotenv.config();
 
@@ -44,9 +44,11 @@ app.get('/api/health/db', async (req, res) => {
   }
 });
 
-// Question answering: SANAD RAG pipeline (OpenAI + published Supabase content only).
-// The previous Gemini /api/chat route generated answers without retrieval and has been removed.
-app.post('/api/ask', createAskHandler(getRagDeps));
+// Question answering: approved corpus (validated content from the reference sources) + optional model
+// for understanding and selection only. No religious text is ever generated.
+const answerService = createAnswerService();
+app.get('/api/meta', metaHandler(answerService));
+app.post('/api/ask', askHandler(answerService));
 
 async function startServer() {
   if (!isProd) {

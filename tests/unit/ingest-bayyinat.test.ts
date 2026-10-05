@@ -74,6 +74,8 @@ describe('quotation kinds', async () => {
     expect(isQuranReference('[البقرة: 30]')).toBe(true);
     expect(isQuranReference('[فُصِّلت: 42]؟!')).toBe(true);
     expect(isQuranReference('[الأنبياء:26- 27].')).toBe(true);
+    expect(isQuranReference('[الحج: 52: 54]')).toBe(true);
+    expect(isQuranReference('[الأعراف: 111، الشعراء: 36]')).toBe(true);
     expect(isQuranReference('رواه أبو عُبَيدٍ في «غريبِ الحديث» (4/ 248)')).toBe(false);
     expect(isQuranReference(null)).toBe(false);
   });
