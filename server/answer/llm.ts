@@ -54,7 +54,11 @@ export function createLlm(settings: LlmSettings, fetchImpl: typeof fetch = fetch
             ],
           }),
         });
-        if (!res.ok) throw new Error(`LLM HTTP ${res.status}`);
+        if (!res.ok) {
+          // the provider's error message helps (e.g. unknown model); it never contains the key
+          const detail = (await res.text().catch(() => '')).replace(/\s+/g, ' ').slice(0, 300);
+          throw new Error(`LLM HTTP ${res.status} ${detail}`);
+        }
         const data = (await res.json()) as { choices?: Array<{ message?: { content?: string } }> };
         const text = data.choices?.[0]?.message?.content ?? '';
         const json = JSON.parse(text.replace(/^```(?:json)?\s*|\s*```$/g, ''));

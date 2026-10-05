@@ -19,12 +19,12 @@ const short = (s: string, n = 90) => (s.length > n ? s.slice(0, n) + '…' : s).
 for (const c of BENCHMARK_TEST_CASES) {
   console.log(`■ ${c.id} [${c.targetTier}] ${c.title}`);
   for (const [lang, q] of [['en', c.questionEn], ['ur', c.questionUr], ['bn', c.questionBn]] as const) {
-    const { response: r, trace } = await answer({ question: q }, { index, corpus, llm });
+    const { response: r, trace } = await answer({ question: q }, { index, corpus, llm, log: (m) => console.log('   ! ' + m) });
     let out = r.kind;
     if (r.kind === 'answer') out += ` (${r.items.map((i) => `${i.type}:${i.id}/${i.translation}`).join(', ')}) → ${short(i0(r.items[0]))}`;
     if (r.kind === 'refer') out += ` (${r.reason})`;
     if (r.kind === 'clarify') out += ` → ${short(r.question)}`;
-    console.log(`   ${lang} lang=${r.language} ${out}   [top: ${trace.hits.slice(0, 2).map((h) => `${h.id} s${h.score} c${h.coverage}`).join(' | ')}]`);
+    console.log(`   ${lang} lang=${r.language} model=${trace.usedModel ? 'yes' : 'NO'} ${out}   [top: ${trace.hits.slice(0, 2).map((h) => `${h.id} s${h.score} c${h.coverage}`).join(' | ')}]`);
   }
   console.log(`   expected: ${c.expectedBehaviorEn}\n`);
 }
