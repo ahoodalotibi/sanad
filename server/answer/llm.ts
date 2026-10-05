@@ -26,7 +26,7 @@ export function readLlmSettings(env: Record<string, string | undefined> = proces
     apiKey,
     baseUrl: (env.LLM_BASE_URL?.trim() || 'https://generativelanguage.googleapis.com/v1beta/openai/').replace(/\/?$/, '/'),
     model: env.LLM_MODEL?.trim() || 'gemini-3.5-flash-lite',
-    timeoutMs: Number(env.LLM_TIMEOUT_MS) || 20000,
+    timeoutMs: Number(env.LLM_TIMEOUT_MS) || 30000,
   };
 }
 
@@ -85,6 +85,8 @@ export function createLlm(settings: LlmSettings, fetchImpl: typeof fetch = fetch
           return await once(system, user, schema);
         } catch (err) {
           const msg = (err as Error).message;
+          // a slow first call (e.g. right after the server wakes up) is retried once
+          if (/aborted/i.test(msg) && attempt === 0) continue;
           if (!msg.startsWith('LLM HTTP 429') || attempt >= 2) throw err;
           const asked = /retry in ([\d.]+)s/i.exec(msg);
           await waitMs(Math.min(30, asked ? Number(asked[1]) + 1 : 6) * 1000);
@@ -137,7 +139,7 @@ export type Selection = z.infer<typeof Selection>;
 
 export const SELECT_SYSTEM = `You check search results for "Sanad". You are given a user's question and numbered candidate texts from approved sources (hadith, Q&A, dictionary entries), each with an id.
 Select the ids (at most 3, best first) whose text DIRECTLY answers or addresses what the user asked. A text that only shares words with the question, or is about a different matter, must NOT be selected.
-- If the user asks what a term or concept means (including "explain X simply"), the dictionary entry for exactly that term DOES answer it.
+- If the user asks what a term or concept means (including "explain X simply"), the dictionary entry for exactly that term DOES answer it. An entry about a narrower, related or different concept does NOT (e.g. "prayer of the sick" does not answer "how is the prayer performed"; "science of tawheed" is weaker than "tawheed" itself — prefer the exact term when present).
 - A published Q&A whose question is the same doubt or misconception the user raises DOES answer it, whatever language the user wrote in.
 - A hadith answers only if its text is about what was asked; do not select a hadith for a request to find a specific narration unless that exact narration is among the candidates. If none directly addresses the question, return an empty list — that is the correct answer whenever in doubt.
 Return JSON: {"selected": ["id", ...], "reason": "short reason"}. Never add, rewrite or explain religious content.`;
