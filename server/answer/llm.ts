@@ -8,7 +8,7 @@
  * Works with any OpenAI-compatible chat endpoint. Defaults to Google Gemini:
  *   LLM_API_KEY      required to enable the model (Gemini key from aistudio.google.com)
  *   LLM_BASE_URL     default https://generativelanguage.googleapis.com/v1beta/openai/
- *   LLM_MODEL        default gemini-2.5-flash-lite
+ *   LLM_MODEL        default gemini-3.5-flash-lite
  */
 import { z } from 'zod';
 
@@ -25,7 +25,7 @@ export function readLlmSettings(env: Record<string, string | undefined> = proces
   return {
     apiKey,
     baseUrl: (env.LLM_BASE_URL?.trim() || 'https://generativelanguage.googleapis.com/v1beta/openai/').replace(/\/?$/, '/'),
-    model: env.LLM_MODEL?.trim() || 'gemini-2.5-flash-lite',
+    model: env.LLM_MODEL?.trim() || 'gemini-3.5-flash-lite',
     timeoutMs: Number(env.LLM_TIMEOUT_MS) || 20000,
   };
 }
