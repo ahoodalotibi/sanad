@@ -17,7 +17,7 @@ import { createMemoryIngestStore, createSupabaseIngestStore, type IngestStore } 
 import { loadDictionary } from './jamharah/load.ts';
 import { loadBayyinat } from './bayyinat/load.ts';
 import type { DictionaryRecord } from './jamharah-dictionary.ts';
-import type { BayyinatRecord } from './bayyinat/extract.ts';
+import type { BayyinatRecord } from './bayyinat.ts';
 
 const args = parseArgs();
 const SOURCES = {
